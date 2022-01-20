@@ -1,4 +1,4 @@
-import 'package:getting_version_app/pages/login_page.dart';
+import 'package:getting_version_app/pages/login_signin/login_page.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:flutter/material.dart';
 import 'package:getting_version_app/pages/device_country_page.dart';
