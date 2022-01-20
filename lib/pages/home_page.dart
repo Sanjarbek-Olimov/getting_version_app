@@ -3,6 +3,7 @@ import 'package:permission_handler/permission_handler.dart';
 import 'package:flutter/material.dart';
 import 'package:getting_version_app/pages/device_country_page.dart';
 import 'package:getting_version_app/pages/version_page.dart';
+import 'package:shake/shake.dart';
 
 class HomePage extends StatefulWidget {
   static const String id = "home_page";
@@ -16,8 +17,12 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   void initState() {
     super.initState();
+    ShakeDetector detector = ShakeDetector.autoStart(onPhoneShake: (){
+      Navigator.pushNamed(context, DeviceCountryPage.id);
+    });
     _askPermissions(null);
   }
+
 
   Future<void> _askPermissions(String? routeName) async {
     PermissionStatus permissionStatus = await _getLocationPermission();

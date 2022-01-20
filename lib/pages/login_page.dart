@@ -12,18 +12,20 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   int _selectedIndex = 1;
-  PageController _pageController = PageController();
+  final PageController _pageController = PageController(
+    initialPage: 1
+  );
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xfffa6c3a),
+      backgroundColor: const Color(0xfffa6c3a),
       body: Stack(
         children: [
           Container(
               margin: const EdgeInsets.only(top: 100),
               alignment: Alignment.topCenter,
-              child: Text(
+              child: const Text(
                 "Your Logo",
                 style: TextStyle(
                     color: Colors.white,
@@ -105,7 +107,8 @@ class _LoginPageState extends State<LoginPage> {
             padding: EdgeInsets.only(
                 bottom: MediaQuery.of(context).size.height * 0.38),
             child: SmoothPageIndicator(
-              controller: _pageController, count: 3,
+              controller: _pageController,
+              count: 3,
               effect: WormEffect(
                 dotHeight: 7,
                 dotWidth: 7,
