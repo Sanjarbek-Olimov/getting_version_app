@@ -1,4 +1,5 @@
 import 'package:getting_version_app/pages/login_signin/login_page.dart';
+import 'package:getting_version_app/pages/pin_code.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:flutter/material.dart';
 import 'package:getting_version_app/pages/device_country_page.dart';
@@ -90,6 +91,14 @@ class _HomePageState extends State<HomePage> {
               onPressed: (){
                 _askPermissions(LoginPage.id);
               }, child: Text("Login Page", style: TextStyle(fontSize: 20, color: Colors.white),),),
+            MaterialButton(
+              shape: StadiumBorder(),
+              height: 40,
+              minWidth: 200,
+              color: Colors.blue,
+              onPressed: (){
+                Navigator.pushNamed(context, PinCodeVerificationScreen.id);
+              }, child: Text("Pin Code Field", style: TextStyle(fontSize: 20, color: Colors.white),),),
           ],
         ),
       ),

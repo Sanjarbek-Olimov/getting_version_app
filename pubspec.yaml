@@ -41,6 +41,7 @@ dependencies:
   intl_phone_field: ^3.0.0
   smooth_page_indicator: ^1.0.0+2
   shake: ^2.0.0
+  pin_code_fields: ^7.3.0
 
 dev_dependencies:
   flutter_test:

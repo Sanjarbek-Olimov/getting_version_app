@@ -5,6 +5,7 @@ import 'package:getting_version_app/pages/home_page.dart';
 import 'package:getting_version_app/pages/login_signin/get_started.dart';
 import 'package:getting_version_app/pages/login_signin/login_page.dart';
 import 'package:getting_version_app/pages/login_signin/sign_in.dart';
+import 'package:getting_version_app/pages/pin_code.dart';
 import 'package:getting_version_app/pages/version_page.dart';
 
 void main() {
@@ -34,7 +35,8 @@ class MyApp extends StatelessWidget {
         DeviceCountryPage.id: (context) => DeviceCountryPage(),
         LoginPage.id: (context) => LoginPage(),
         GetStartedPage.id: (context) => GetStartedPage(),
-        SignInPage.id: (context) => SignInPage()
+        SignInPage.id: (context) => SignInPage(),
+        PinCodeVerificationScreen.id: (context) => PinCodeVerificationScreen()
       },
     );
   }

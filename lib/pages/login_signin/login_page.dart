@@ -37,6 +37,12 @@ class _LoginPageState extends State<LoginPage> {
         backgroundColor: Colors.transparent,
         barrierColor: Colors.transparent,
         isScrollControlled: true,
+        shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(50),
+                topRight: Radius.circular(50)
+            )
+        ),
         context: context,
         builder: (context) {
           return SignInPage();
